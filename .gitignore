@@ -6,7 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+# image 2.png
+# image_1.png
+# image_3.png
+# kurnchi_image_1.png
+# kurnchi_image_2.png
+# KURNCHI_IMAGE_3.png
+# kurnchi_resturant_logo.jpg
+# Kurry n chilli menu_compressed.pdf
+Kurry n chilli menu.pdf
 node_modules
 dist
 dist-ssr

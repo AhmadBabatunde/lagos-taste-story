@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { RESERVE_WHATSAPP, WHATSAPP_NUMBER } from "@/lib/menu-data";
-import interior from "@/assets/kurnchi-interior.png.asset.json";
+import interiorUrl from "../../KURNCHI_IMAGE_3.png";
 
 export const Route = createFileRoute("/reservations")({
   head: () => ({
@@ -40,7 +40,7 @@ function ReservationsPage() {
   return (
     <div>
       <section className="relative h-[45svh] min-h-[360px] bg-ink overflow-hidden">
-        <img src={interior.url} alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <img src={interiorUrl} alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 to-ink" />
         <div className="container-wide relative h-full flex items-end pb-16">
           <div>

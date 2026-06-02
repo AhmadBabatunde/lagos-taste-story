@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/kurnchi-logo.jpg.asset.json";
+import logoUrl from "../../kurnchi_resturant_logo.jpg";
 import { INSTAGRAM, WHATSAPP_LINK } from "@/lib/menu-data";
 
 export function SiteFooter() {
@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="container-wide grid gap-12 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-4">
-            <img src={logoAsset.url} alt="Kurnchi" className="h-14 w-14 rounded-full" width={56} height={56} />
+            <img src={logoUrl} alt="Kurnchi" className="h-14 w-14 rounded-full" width={56} height={56} />
             <div>
               <div className="font-display text-2xl">Kurnchi</div>
               <div className="eyebrow !text-cream/60">Chinese Restaurant · Lagos</div>

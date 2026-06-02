@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import chefWok from "@/assets/chef-wok.jpg";
-import interior from "@/assets/kurnchi-interior.png.asset.json";
-import dish2 from "@/assets/kurnchi-dish-2.png.asset.json";
+import interiorUrl from "../../KURNCHI_IMAGE_3.png";
+import dish2Url from "../../kurnchi_image_2.png";
 import { RESERVE_WHATSAPP } from "@/lib/menu-data";
 
 export const Route = createFileRoute("/about")({
@@ -65,7 +65,7 @@ function AboutPage() {
         <div className="container-wide grid gap-16 md:grid-cols-12 items-center">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="md:col-span-6">
             <div className="aspect-[4/5] overflow-hidden">
-              <img src={interior.url} alt="Inside Kurnchi at dusk" loading="lazy" className="h-full w-full object-cover" />
+              <img src={interiorUrl} alt="Inside Kurnchi at dusk" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </motion.div>
           <div className="md:col-span-6">
@@ -116,7 +116,7 @@ function AboutPage() {
       <section className="bg-cream py-24 md:py-32 border-t border-gold/30">
         <div className="container-wide grid gap-16 md:grid-cols-12 items-end">
           <div className="md:col-span-6">
-            <img src={dish2.url} alt="Kurnchi family table" loading="lazy" className="aspect-[5/4] w-full object-cover" />
+            <img src={dish2Url} alt="Kurnchi family table" loading="lazy" className="aspect-[5/4] w-full object-cover" />
           </div>
           <div className="md:col-span-6">
             <div className="eyebrow mb-4">The Team</div>

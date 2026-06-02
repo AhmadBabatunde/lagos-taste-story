@@ -3,13 +3,10 @@ import { motion } from "framer-motion";
 import heroAsset from "@/assets/hero-main.jpg";
 import dishSignature from "@/assets/dish-signature.jpg";
 import chefWok from "@/assets/chef-wok.jpg";
-import dishChicken from "@/assets/dish-chicken.jpg";
-import dishPrawn from "@/assets/dish-prawn.jpg";
-import dishSoup from "@/assets/dish-soup.jpg";
 import dishNoodles from "@/assets/dish-noodles.jpg";
-import interior from "@/assets/kurnchi-interior.png.asset.json";
-import dish1 from "@/assets/kurnchi-dish-1.png.asset.json";
-import dish2 from "@/assets/kurnchi-dish-2.png.asset.json";
+import interiorUrl from "../../KURNCHI_IMAGE_3.png";
+import dish1Url from "../../kurnchi_image_1.png";
+import dish2Url from "../../kurnchi_image_2.png";
 import { RESERVE_WHATSAPP } from "@/lib/menu-data";
 
 export const Route = createFileRoute("/")({
@@ -40,9 +37,9 @@ export const Route = createFileRoute("/")({
 });
 
 const signatureDishes = [
-  { img: dishChicken, name: "Sweet & Sour Chicken", cat: "Chicken Sauce", note: "Glossy chilli glaze, sesame finish." },
-  { img: dishPrawn, name: "Butterfly King Prawn", cat: "Starters", note: "Salt-and-chilli crust, whole prawn." },
-  { img: dishSoup, name: "Hot & Sour Peking", cat: "Soups", note: "Tofu, chilli, ginger, slow simmer." },
+  { img: "/dish_1_clean.png", name: "Sweet & Sour Chicken", cat: "Chicken Sauce", note: "Glossy chilli glaze, sesame finish." },
+  { img: "/dish_2_clean.png", name: "Butterfly King Prawn", cat: "Starters", note: "Salt-and-chilli crust, whole prawn." },
+  { img: "/dish_3_clean.png", name: "Hot & Sour Peking", cat: "Soups", note: "Tofu, chilli, ginger, slow simmer." },
   { img: dishNoodles, name: "Singapore Noodles", cat: "Noodles", note: "Curry-kissed, wok-tossed, prawn." },
 ];
 
@@ -61,19 +58,15 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/85" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(0,0,0,0.6)_100%)]" />
 
-        <div className="relative z-10 flex h-full items-end pb-20 md:pb-28">
-          <div className="container-wide grid gap-10 md:grid-cols-12 items-end">
+        <div className="relative z-10 flex h-full items-center pt-32 pb-16">
+          <div className="container-wide grid gap-10 md:grid-cols-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.7, 0, 0.2, 1] }}
               className="md:col-span-8 text-cream"
             >
-              <div className="eyebrow !text-[var(--gold)] mb-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-[var(--gold)]" />
-                Gbagada · Lagos · Est. 火
-              </div>
-              <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-balance text-cream">
+              <h1 className="font-display text-6xl md:text-8xl lg:text-[7rem] leading-[0.95] text-balance text-cream">
                 Slow food.<br />
                 <span className="italic text-[var(--gold)]">Fast friends.</span><br />
                 A Lagos love letter to Cantonese fire.
@@ -112,15 +105,13 @@ function HomePage() {
 
       {/* MARQUEE */}
       <div className="border-y border-[var(--gold)]/30 bg-[var(--ink)] text-cream overflow-hidden">
-        <div className="container-wide flex items-center gap-12 py-5 text-[0.7rem] tracking-[0.3em] uppercase text-cream/70 whitespace-nowrap overflow-x-auto">
+        <div className="container-wide flex justify-center items-center gap-x-8 py-5 text-[0.7rem] tracking-[0.3em] uppercase text-cream/70 text-center whitespace-nowrap overflow-x-auto">
           <span className="text-[var(--gold)]">★</span>
           <span>Lagos' Cantonese Soul</span>
           <span className="text-[var(--gold)]">·</span>
           <span>Wok-fired since day one</span>
           <span className="text-[var(--gold)]">·</span>
           <span>Private dining available</span>
-          <span className="text-[var(--gold)]">·</span>
-          <span>WhatsApp reservations</span>
           <span className="text-[var(--gold)]">·</span>
           <span>Open 7 nights</span>
         </div>
@@ -146,8 +137,9 @@ function HomePage() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 hidden md:flex items-center justify-center h-32 w-32 rounded-full bg-[var(--crimson)] text-cream font-display text-xl text-center leading-tight p-4 shadow-2xl">
-              Since the <em className="text-[var(--gold)] not-italic">first</em> spark
+            <div className="absolute -bottom-6 -right-6 hidden md:flex flex-col items-center justify-center h-36 w-36 rounded-full bg-[var(--crimson)] text-cream font-display text-xl text-center leading-tight p-4 shadow-2xl">
+              <span>Since the</span>
+              <span><em className="text-[var(--gold)] not-italic">first</em> spark</span>
             </div>
           </motion.div>
 
@@ -275,13 +267,13 @@ function HomePage() {
 
           <div className="lg:col-span-7 grid grid-cols-6 gap-4">
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="col-span-4 aspect-[4/5] overflow-hidden">
-              <img src={interior.url} alt="Kurnchi dining room interior" loading="lazy" className="h-full w-full object-cover" />
+              <img src={interiorUrl} alt="Kurnchi dining room interior" loading="lazy" className="h-full w-full object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }} className="col-span-2 aspect-[3/4] overflow-hidden mt-12">
-              <img src={dish1.url} alt="Signature plated dish" loading="lazy" className="h-full w-full object-cover" />
+              <img src={dish1Url} alt="Signature plated dish" loading="lazy" className="h-full w-full object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }} className="col-span-3 aspect-square overflow-hidden">
-              <img src={dish2.url} alt="A spread of Kurnchi dishes" loading="lazy" className="h-full w-full object-cover" />
+              <img src={dish2Url} alt="A spread of Kurnchi dishes" loading="lazy" className="h-full w-full object-cover" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }} className="col-span-3 aspect-square overflow-hidden">
               <img src={dishSignature} alt="Overhead Cantonese spread" loading="lazy" className="h-full w-full object-cover" />

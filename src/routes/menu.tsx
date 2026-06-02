@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { menuCategories, RESERVE_WHATSAPP } from "@/lib/menu-data";
 import dishSignature from "@/assets/dish-signature.jpg";
+import menuPdf from "../../Kurry n chilli menu_compressed.pdf";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -136,6 +137,9 @@ function MenuPage() {
           <h2 className="font-display text-4xl md:text-5xl">Tonight, then?</h2>
           <p className="mt-4 text-cream/70 font-light">Reserve a table or order direct on WhatsApp.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a href={menuPdf} target="_blank" rel="noreferrer" className="btn-ghost text-cream border-[var(--gold)]/60 hover:text-ink">
+              Download PDF Menu
+            </a>
             <a href={RESERVE_WHATSAPP} target="_blank" rel="noreferrer" className="btn-primary bg-gold !text-ink border-gold">Order on WhatsApp</a>
           </div>
         </div>

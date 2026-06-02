@@ -7,9 +7,9 @@ import dishChicken from "@/assets/dish-chicken.jpg";
 import dishPrawn from "@/assets/dish-prawn.jpg";
 import dishSoup from "@/assets/dish-soup.jpg";
 import dishNoodles from "@/assets/dish-noodles.jpg";
-import interior from "@/assets/kurnchi-interior.png.asset.json";
-import dish1 from "@/assets/kurnchi-dish-1.png.asset.json";
-import dish2 from "@/assets/kurnchi-dish-2.png.asset.json";
+import interiorUrl from "../../KURNCHI_IMAGE_3.png";
+import dish1Url from "../../kurnchi_image_1.png";
+import dish2Url from "../../kurnchi_image_2.png";
 import interiorWide from "@/assets/interior-wide.jpg";
 
 export const Route = createFileRoute("/gallery")({
@@ -28,10 +28,10 @@ export const Route = createFileRoute("/gallery")({
 
 const items = [
   { src: heroAsset, alt: "Dining tables at Kurnchi", span: "row-span-2" },
-  { src: dish1.url, alt: "Plated signature dish" },
+  { src: dish1Url, alt: "Plated signature dish" },
   { src: chefWok, alt: "Wok flames", span: "row-span-2" },
-  { src: dish2.url, alt: "Tabletop spread" },
-  { src: interior.url, alt: "Lanterns in the dining room" },
+  { src: dish2Url, alt: "Tabletop spread" },
+  { src: interiorUrl, alt: "Lanterns in the dining room" },
   { src: dishChicken, alt: "Sweet and sour chicken", span: "row-span-2" },
   { src: dishPrawn, alt: "Butterfly king prawn" },
   { src: interiorWide, alt: "Wide view of the dining room" },

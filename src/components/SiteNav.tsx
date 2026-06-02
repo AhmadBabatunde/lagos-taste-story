@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoAsset from "@/assets/kurnchi-logo.jpg.asset.json";
+import logoUrl from "../../kurnchi_resturant_logo.jpg";
 import { RESERVE_WHATSAPP } from "@/lib/menu-data";
 
 const links = [
@@ -35,7 +35,7 @@ export function SiteNav() {
       <div className="container-wide flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-3 group" aria-label="Kurnchi home">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Kurnchi"
             width={44}
             height={44}
